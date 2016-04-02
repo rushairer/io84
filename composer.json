@@ -1,0 +1,26 @@
+{
+    "name": "io84",
+        "description": "A Simple PHP Framework based on Composer.",
+        "require": {
+            "php": ">=5.4.0",
+            "illuminate/database": "*",
+            "filp/whoops": "*",
+            "nette/mail": "*",
+            "predis/predis": "*",
+            "monolog/monolog": "*",
+            "danielstjules/stringy": "*",
+            "klein/klein": "*"
+
+        },
+        "autoload": {
+            "psr-4": {
+                "App\\": "app/"
+            },
+            "classmap": [
+                "services"
+                    ]
+        },
+        "config": {
+            "preferred-install": "dist"
+        }
+}
