@@ -18,5 +18,9 @@
     </li>
   </ul>
   <a href="demo">JSON demo</a>
+  <hr/>
+  <a href="/api?name=demo">Demo API</a>
+  <hr/>
+  <a href="/api?name=v1">V1 API</a>
 </body>
 </html>
