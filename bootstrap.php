@@ -5,7 +5,7 @@ use Illuminate\Database\Capsule\Manager as DB;
 define('BASE_PATH', __DIR__);
 
 // VIEW_BASE_PATH
-define('VIEW_BASE_PATH', BASE_PATH.'/app/views/');
+define('VIEW_BASE_PATH', BASE_PATH.'/resources/views/');
 
 // Autoload
 require BASE_PATH.'/vendor/autoload.php';

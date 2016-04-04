@@ -1,5 +1,4 @@
 <?php
-
 namespace PetstoreIO;
 
 class UserController

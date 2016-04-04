@@ -1,5 +1,4 @@
 <?php
-
 namespace PetstoreIO;
 
 abstract class StoreController

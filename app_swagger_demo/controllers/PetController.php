@@ -1,5 +1,4 @@
 <?php
-
 namespace PetstoreIO;
 
 final class PetController

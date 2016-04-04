@@ -8,9 +8,9 @@ return [
   'write' => [
     'host'      => '127.0.0.1',
   ],
-  'database'  => 'io84',
+  'database'  => 'api_io84',
   'username'  => 'root',
-  'password'  => '',
+  'password'  => '123456',
   'charset'   => 'utf8',
   'collation' => 'utf8_general_ci',
   'prefix'    => ''
