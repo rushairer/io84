@@ -1,6 +1,17 @@
 {
-    "name": "io84",
+        "name": "rushairer/io84",
+        "license": "MIT",
         "description": "A Simple PHP Framework based on Composer.",
+        "keywords": ["php", "mvc", "framework"],
+        "homepage": "https://github.com/rushairer",
+        "authors": [
+                {
+                    "name": "rushairer",
+                    "homepage": "https://github.com/rushairer",
+                    "role": "Developer"
+                }
+                ],
+
         "require": {
             "php": ">=5.4.0",
             "illuminate/database": "*",
