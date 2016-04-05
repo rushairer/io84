@@ -1,2 +1,3 @@
-*.php linguist-language=Scala
-*.html linguist-language=Scala
+*.css linguist-language=php
+*.html linguist-language=php
+*.js linguist-language=php
