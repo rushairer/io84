@@ -1,6 +1,27 @@
 <?php
 $route = new Route;
 
+//OAuthServerController
+$route->respond(array('GET','POST'),'/oauth2/authorize', function () use ($route){
+    $route->make('App\Controllers\OAuthServerController')->authorize();
+});
+
+$route->respond('POST','/oauth2/access_token', function () use ($route){
+    $route->make('App\Controllers\OAuthServerController')->token();
+});
+
+$route->respond(array('GET','POST'),'/oauth2/success', function () use ($route){
+    $route->make('App\Controllers\OAuthServerController')->success();
+});
+
+//OAuthController
+$route->respond('GET','/oauth2/request', function () use ($route){
+    $route->make('App\Controllers\OAuthController')->request();
+});
+$route->respond('GET','/oauth2/access', function () use ($route){
+    $route->make('App\Controllers\OAuthController')->access();
+});
+
 //HomeController
 $route->respond('GET','/', function () use ($route){
     $route->make('App\Controllers\HomeController')->home();

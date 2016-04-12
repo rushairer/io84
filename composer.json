@@ -21,7 +21,10 @@
             "monolog/monolog": "*",
             "danielstjules/stringy": "*",
             "klein/klein": "*",
-            "zircote/swagger-php": "*"
+            "zircote/swagger-php": "*",
+            "evaengine/eva-oauth": "*",
+            "bshaffer/oauth2-server-php": "*",
+            "doctrine/cache": "*"
         },
         "autoload": {
             "psr-4": {

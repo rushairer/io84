@@ -32,6 +32,8 @@
 
   <script type="text/javascript">
     $(function () {
+
+      window.oAuthRedirectUrl = 'http://api-dev.io84.com/oauth2/access';
       var url = window.location.search.match(/url=([^&]+)/);
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
@@ -54,10 +56,10 @@
         onComplete: function(swaggerApi, swaggerUi){
           if(typeof initOAuth == "function") {
             initOAuth({
-              clientId: "your-client-id",
-              clientSecret: "your-client-secret-if-required",
+              clientId: "09dc4f79eaef2e2bfa4e41f2f20c94f1",
+              clientSecret: "34ebc4baeb5a7692e35263eb78a6532a",
               realm: "your-realms",
-              appName: "your-app-name",
+              appName: "io84-api",
               scopeSeparator: ",",
               additionalQueryStringParams: {}
             });

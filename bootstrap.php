@@ -20,6 +20,7 @@ $monolog->pushHandler(new \Monolog\Handler\StreamHandler(BASE_PATH.'/logs/app.lo
 // BASE_URL
 $config = require BASE_PATH.'/config/config.php';
 define('BASE_URL', $config['base_url']);
+define('HOST', $config['host']);
 
 // whoops: php errors for cool kids
 $whoops = new \Whoops\Run;
@@ -41,4 +42,3 @@ $db = new DB;
 $db->addConnection(require BASE_PATH.'/config/database.php');
 $db->setAsGlobal();
 $db->bootEloquent();
-

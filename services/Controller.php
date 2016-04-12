@@ -21,7 +21,12 @@ class Controller {
     $this->service->escape = function ($str) {
         return htmlentities($str);
     };
+
+    $this->init();
   }
+  public function init() {
+  }
+
   public function render($view, $data = array()) {
       $this->service->render(VIEW_BASE_PATH.$view, $data);
   }

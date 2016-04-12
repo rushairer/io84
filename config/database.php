@@ -8,6 +8,7 @@ return [
   'write' => [
     'host'      => '127.0.0.1',
   ],
+  'dsn'       => 'mysql:dbname=api_io84;host=127.0.0.1',
   'database'  => 'api_io84',
   'username'  => 'root',
   'password'  => '123456',
