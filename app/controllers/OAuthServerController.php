@@ -71,12 +71,16 @@ class OAuthServerController extends Controller {
 
         // print the authorization code if the user has authorized your client
         $is_authorized = ($_POST['authorized'] === 'yes');
-        $this->oauthServer->handleAuthorizeRequest($request, $response, $is_authorized);
+
+        //TODO: user_id
+        $user_id = $is_authorized ? 1345 : NULL;
+
+        $this->oauthServer->handleAuthorizeRequest($request, $response, $is_authorized, $user_id);
         if ($is_authorized) {
             // this is only here so that you get to see your code in the cURL request. Otherwise, we'd redirect back to the client
             $code = substr($response->getHttpHeader('Location'), strpos($response->getHttpHeader('Location'), 'code=')+5, 40);
-            header('Location:' . $response->getHttpHeader('Location'));
-            exit();
+            $this->response->header('Location',$response->getHttpHeader('Location'));
+            $this->response->sendHeaders();
         }
         $response->send();
     }
