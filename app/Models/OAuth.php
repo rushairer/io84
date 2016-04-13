@@ -6,7 +6,12 @@ namespace App\Models;
 */
 class OAuth extends \Eva\EvaOAuth\OAuth2\Providers\AbstractProvider {
 
-    protected $authorizeUrl = 'http://'.HOST.'/oauth2/authorize';
-    protected $accessTokenUrl = 'http://'.HOST.'/oauth2/access_token';
+    protected $authorizeUrl;
+    protected $accessTokenUrl;
+
+    function __construct() {
+        $this->authorizeUrl = 'http://' . HOST . '/oauth2/authorize';
+        $this->accessTokenUrl = 'http://' . HOST . '/oauth2/access_token';
+    }
 
 }
