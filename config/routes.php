@@ -1,6 +1,19 @@
 <?php
 $route = new Route;
 
+//FFApiController
+$route->respond('GET','/filmfilm', function () use ($route){
+    $route->make('App\Controllers\FFApiController')->home();
+});
+$route->respond('GET','/filmfilm/v1', function () use ($route){
+    $route->make('App\Controllers\FFApiController')->v1();
+});
+
+$route->respond('GET','/filmfilm/v1/effect/list', function () use ($route){
+    $route->make('App\Controllers\EffectController')->getList();
+});
+
+
 //OAuthServerController
 $route->respond(array('GET','POST'),'/oauth2/authorize', function () use ($route){
     $route->make('App\Controllers\OAuthServerController')->authorize();
