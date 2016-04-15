@@ -15,6 +15,15 @@ $route->respond('GET','/filmfilm/v1/effect/list', function () use ($route){
 
 
 //OAuthServerController
+
+$route->respond(array('GET','POST'),'/filmfilm/v1/oauth2/authorize', function () use ($route){
+    $route->make('App\Controllers\OAuthServerController')->authorize();
+});
+
+$route->respond('POST','/filmfilm/v1/oauth2/access_token', function () use ($route){
+    $route->make('App\Controllers\OAuthServerController')->token();
+});
+
 $route->respond(array('GET','POST'),'/oauth2/authorize', function () use ($route){
     $route->make('App\Controllers\OAuthServerController')->authorize();
 });
