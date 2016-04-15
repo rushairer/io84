@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model as Model;
 
 /**
- * @SWG\Definition(id="Effect", required={"id","name","category_id"}, @SWG\Xml(name="Effect"))
+ * @SWG\Definition(id="Effect", required={"eid","name","category_id"}, @SWG\Xml(name="Effect"))
  */
 
 class Effect extends Model {
@@ -17,7 +17,7 @@ class Effect extends Model {
      * @SWG\Property(format="int64",example=1)
      * @var int
      */
-    public $id;
+    public $eid;
 
     /**
      * @SWG\Property(example="S1")

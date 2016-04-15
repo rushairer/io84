@@ -40,7 +40,7 @@ class EffectController extends BaseAuthController {
         $this->checkAuth();
         $effctModel = new Effect();
         $effectList = $effctModel->select(array(
-            'id',
+            'eid',
             'name',
             'category_id',
             'created_at',
