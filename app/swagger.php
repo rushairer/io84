@@ -2,7 +2,7 @@
 /**
  * @SWG\Swagger(
  *     schemes={"http"},
- *     host="api-dev.io84.com",
+ *     host="api.io84.com",
  *     basePath="/filmfilm/v1",
  *     @SWG\Info(
  *         version="1.0.0",
@@ -30,8 +30,8 @@
  * @SWG\SecurityScheme(
  *   securityDefinition="io84-api",
  *   type="oauth2",
- *   authorizationUrl="http://api-dev.io84.com/oauth2/authorize",
- *   tokenUrl="http://api-dev.io84.com/oauth2/access_token",
+ *   authorizationUrl="http://api.io84.com/oauth2/authorize",
+ *   tokenUrl="http://api.io84.com/oauth2/access_token",
  *   flow="application",
  *   scopes={
  *     "login": "login",

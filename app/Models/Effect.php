@@ -17,30 +17,30 @@ class Effect extends Model {
      * @SWG\Property(format="int64",example=1)
      * @var int
      */
-    public $eid;
+    protected $eid;
 
     /**
      * @SWG\Property(example="S1")
      * @var string
      */
-    public $name;
+    protected $name;
 
     /**
      * @SWG\Property(format="int32",example=1)
      * @var int
      */
-    public $category_id;
+    protected $category_id;
 
     /**
      * @var \DateTime
      * @SWG\Property()
      */
-    public $created_at;
+    protected $created_at;
 
     /**
      * @var \DateTime
      * @SWG\Property()
      */
-    public $updated_at;
+    protected $updated_at;
 
 }

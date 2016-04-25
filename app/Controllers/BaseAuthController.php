@@ -40,8 +40,20 @@ class BaseAuthController extends Controller {
 
     public function checkAuth() {
         if (!$this->oauthServer->verifyResourceRequest(OAuth2\Request::createFromGlobals())) {
+                $parameters = $this->oauthServer->getResponse()->getParameters();
+                $parameters = array_merge(
+                    array(
+                        'code' => 401,
+                        'error' => 'Invalid token',
+                        'error_description' => 'Invalid token',
+                    ),
+                    $parameters
+                );
+                if (!empty($parameters)) {
+                    $this->oauthServer->getResponse()->setParameters($parameters);
+                }
                 $this->oauthServer->getResponse()->send();
-                    die;
+                die;
         }
     }
 

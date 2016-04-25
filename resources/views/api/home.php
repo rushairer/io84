@@ -33,7 +33,7 @@
   <script type="text/javascript">
     $(function () {
 
-      window.oAuthRedirectUrl = 'http://api-dev.io84.com/oauth2/access';
+      window.oAuthRedirectUrl = 'http://api.io84.com/oauth2/access';
       var url = window.location.search.match(/url=([^&]+)/);
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
